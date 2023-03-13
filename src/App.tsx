@@ -35,7 +35,7 @@ export default function App() {
       <h2>Start editing to see some magic happen!</h2>
 
       {/* berikut cara implementasi components */}
-      <Greet name={"Balinux"} age={21} />
+      <Greet name={"Balinux"} age={21} isMarriage={true} />
       <Person name={person} />
 
       <PersonList names={nameList} />
