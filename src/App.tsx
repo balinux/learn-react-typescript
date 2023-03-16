@@ -8,6 +8,7 @@ import { Button } from "./components/Button";
 import Button2 from "./components/Button2";
 import { Input } from "./components/Input";
 import "./styles.css";
+import { Container } from "./components/Container";
 
 export default function App() {
   // constoh props data object
@@ -61,6 +62,9 @@ export default function App() {
       />
       <Button2 onClick={handleClick} />;
       <Input value="" handleChange={(event) => console.log(event)} />
+      
+      {/* example style props */}
+      <Container style={{border:'1px solid black' ,padding:'1rem'}}/>
     </div>
   );
 }
