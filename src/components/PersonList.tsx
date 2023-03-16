@@ -1,4 +1,4 @@
-import { Name } from "./Person.Types";
+import { Name } from "./Person.types";
 
 // contoh type data array
 type PersonListprops = {

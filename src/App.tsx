@@ -9,6 +9,7 @@ import Button2 from "./components/Button2";
 import { Input } from "./components/Input";
 import "./styles.css";
 import { Container } from "./components/Container";
+import { LoggedIn } from "./components/state/LoggedIn";
 
 export default function App() {
   // constoh props data object
@@ -68,6 +69,10 @@ export default function App() {
       
       {/* example style props */}
       <Container style={{border:'1px solid black' ,padding:'1rem'}}/>
+    
+    {/* tes set state */}
+    <LoggedIn/>
+    
     </div>
   );
 }
