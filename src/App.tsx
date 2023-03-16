@@ -6,6 +6,7 @@ import { Status } from "./components/Status";
 import { Oscar } from "./components/Oscar";
 import { Button } from "./components/Button";
 import Button2 from "./components/Button2";
+import { Input } from "./components/Input";
 import "./styles.css";
 
 export default function App() {
@@ -59,6 +60,7 @@ export default function App() {
         }}
       />
       <Button2 onClick={handleClick} />;
+      <Input value="" handleChange={(event) => console.log(event)} />
     </div>
   );
 }
