@@ -1,16 +1,18 @@
-// contoh type data object
-type PersonProps = {
-  name: {
-    first: string;
-    last: string;
-  };
-};
+// // contoh type data object
+// type PersonProps = {
+//   name: {
+//     first: string;
+//     last: string;
+//   };
+// };
 
-export const Person = (props: PersonProps) => {
+import { PersonProps } from "./Person.types";
+
+export const Person = ({ name }: PersonProps) => {
   return (
     <div>
       {" "}
-      Hello {props.name.first} {props.name.last}
+      Hello {name.first} {name.last}
     </div>
   );
 };

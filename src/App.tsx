@@ -55,6 +55,9 @@ export default function App() {
         <Heading children={"react component type"} />
       </Oscar> */}
       {/* contoh props button */}
+
+      <Person name={person} />
+
       <Button
         handleClick={() => {
           alert("button clicked");
