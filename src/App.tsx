@@ -10,6 +10,7 @@ import { Input } from "./components/Input";
 import "./styles.css";
 import { Container } from "./components/Container";
 import { LoggedIn } from "./components/state/LoggedIn";
+import { User } from "./components/state/User";
 
 export default function App() {
   // constoh props data object
@@ -73,6 +74,10 @@ export default function App() {
     {/* tes set state */}
     <LoggedIn/>
     
+
+    {/* implementasi usestate dengan type */}
+    <User/>
+
     </div>
   );
 }
