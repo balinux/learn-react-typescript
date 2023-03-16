@@ -4,6 +4,8 @@ import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
 import { Oscar } from "./components/Oscar";
+import { Button } from "./components/Button";
+import Button2 from "./components/Button2";
 import "./styles.css";
 
 export default function App() {
@@ -29,13 +31,16 @@ export default function App() {
     },
   ];
 
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    console.log("Button clicked!");
+  };
+
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-
+      {/* <h1>Hello CodeSandbox</h1> */}
+      {/* <h2>Start editing to see some magic happen!</h2> */}
       {/* berikut cara implementasi components */}
-      <Greet name={"Balinux"} age={21} isMarriage={true} />
+      {/* <Greet name={"Balinux"} age={21} isMarriage={true} />
       <Person name={person} />
 
       <PersonList names={nameList} />
@@ -46,7 +51,14 @@ export default function App() {
       <Heading children={"tes"} />
       <Oscar>
         <Heading children={"react component type"} />
-      </Oscar>
+      </Oscar> */}
+      {/* contoh props button */}
+      <Button
+        handleClick={() => {
+          alert("button clicked");
+        }}
+      />
+      <Button2 onClick={handleClick} />;
     </div>
   );
 }
