@@ -11,6 +11,7 @@ import "./styles.css";
 import { Container } from "./components/Container";
 import { LoggedIn } from "./components/state/LoggedIn";
 import { User } from "./components/state/User";
+import { Counter } from "./components/state/Counter";
 
 export default function App() {
   // constoh props data object
@@ -57,9 +58,7 @@ export default function App() {
         <Heading children={"react component type"} />
       </Oscar> */}
       {/* contoh props button */}
-
       <Person name={person} />
-
       <Button
         handleClick={() => {
           alert("button clicked");
@@ -67,17 +66,16 @@ export default function App() {
       />
       <Button2 onClick={handleClick} />;
       <Input value="" handleChange={(event) => console.log(event)} />
-      
       {/* example style props */}
-      <Container style={{border:'1px solid black' ,padding:'1rem'}}/>
-    
-    {/* tes set state */}
-    <LoggedIn/>
-    
+      <Container style={{ border: "1px solid black", padding: "1rem" }} />
+      {/* tes set state */}
+      <LoggedIn />
+      {/* implementasi usestate dengan type */}
+      <User />
 
-    {/* implementasi usestate dengan type */}
-    <User/>
-
+      <hr />
+      {/* contoh use reduser */}
+      <Counter/>
     </div>
   );
 }
