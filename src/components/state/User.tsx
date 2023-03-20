@@ -6,7 +6,8 @@ type AuthUser = {
 };
 
 export const User = () => {
-  const [user, setUser] = useState<AuthUser| null>(null);
+  // dengan set inisial state dengan object seperti authUser type maka data tidak perlu di set null
+  const [user, setUser] = useState<AuthUser>({} as AuthUser);
 
   const handleLogIn = () => {
     setUser({
@@ -16,15 +17,15 @@ export const User = () => {
   };
 
   const handleLogOut = () => {
-    setUser(null);
+    setUser({} as AuthUser);
   };
 
   return (
     <div>
-      <button onClick={handleLogIn}>Login</button>
-      <button onClick={handleLogOut}>Logout</button>
-      <div> User is {user?.name}</div>
-      <div> Email is {user?.email}</div>
+      <button onClick={handleLogIn}>Login user</button>
+      <button onClick={handleLogOut}>Logout user</button>
+      <div> User is {user.name}</div>
+      <div> Email is {user.email}</div>
     </div>
   );
 };
