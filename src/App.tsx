@@ -13,6 +13,9 @@ import { LoggedIn } from "./components/state/LoggedIn";
 import { User } from "./components/state/User";
 import { Counter } from "./components/state/Counter";
 
+import { ThemeContextProvider } from "./components/context/ThemeContext";
+import { Box } from "./components/context/Box";
+
 export default function App() {
   // constoh props data object
   const person = {
@@ -72,10 +75,15 @@ export default function App() {
       <LoggedIn />
       {/* implementasi usestate dengan type */}
       <User />
-
       <hr />
       {/* contoh use reduser */}
-      <Counter/>
+      <Counter />
+      <div style={{height:'20px'}} />
+      <hr />
+      {/* contoh menggunakan react context API */}
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
